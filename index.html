@@ -83,6 +83,105 @@
             text-decoration: underline;
         }
     </style>
+    <style>
+    /* Existing styles */
+    body {
+        background-color: rgb(83, 184, 175);
+    }
+
+    h1 {
+        font-size: 50px;
+        color: white;
+        text-align: center;
+    }
+
+    .section1 {
+        width: 15%;
+        height: 100vh;
+        color: white;
+        font-size: 22px;
+        text-align: left;
+        position: fixed;
+        top: 14%;
+        margin-left: 20px;
+        left: 0;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        line-height: 40px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 30px;
+        margin-left: 20%;
+    }
+
+    h3,
+    .text2,
+    .text3,
+    .text4,
+    .text5,
+    .text6,
+    .text7,
+    .text8,
+    .text9 {
+        color: white;
+        font-size: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid aliceblue;
+        padding: 8px;
+        text-align: left;
+    }
+
+    u {
+        font-size: 22px;
+        text-decoration: underline;
+        line-height: 60px;
+    }
+
+    .dec {
+        text-decoration: underline;
+    }
+
+    /* New styles following same pattern */
+
+    p {
+        color: white;
+        font-size: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+        line-height: 1.5;
+    }
+
+    button {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 8px 16px;
+        font-size: 18px;
+        margin-left: 20%;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: white;
+        color: rgb(83, 184, 175);
+        transition: 0.3s ease;
+    }
+</style>
 </head>
 
 <body>
@@ -2734,159 +2833,47 @@ Despite its benefits, DBMSs can be costly to install and maintain, require signi
 </menu>
 </div>
 
-         <title>Database Management System & C Programming</title>
-        <style>
-  body {
-    background-color: white;  /* Or your preferred background */
-    color: black;             /* Main text color */
-    margin: 20px;
-    font-family: Arial, sans-serif;
-  }
-  h1, h2, h3 {
-    color: #333;
-  }
-  ul {
-    margin-left: 20px;
-  }
-</style>
+      
+  <meta charset="UTF-8" />
+  <title>File Handling in C</title>
+ 
+  <h1>File Handling</h1>
 
-  <meta charset="UTF-8">
-  <h1>Unit 1: Database Management System</h1>
+  <h2>Concept</h2>
+  <p><strong>Managing data files in C.</strong></p>
 
-  <h2>Data, Information, Features of Information</h2>
-  <p>Data are raw facts; information is processed data that is meaningful. Features include accuracy, relevance, completeness, and timeliness.</p>
+  <h2>Need</h2>
+  <p><strong>Persistent storage.</strong></p>
 
-  <h2>Database and its Purpose</h2>
-  <p>A database is a collection of organized data. Purpose: to store, retrieve, and manage data efficiently.</p>
+  <h2>Types</h2>
+  <p><strong>Sequential and Random files.</strong></p>
 
-  <h2>Terminologies in Database</h2>
+  <h2>File Handling Functions</h2>
   <ul>
-    <li>Table</li>
-    <li>Field</li>
-    <li>Record</li>
-    <li>Tuple</li>
-    <li>Object</li>
-    <li>Keys</li>
+    <li>fopen(), fclose()</li>
+    <li>getc(), putc()</li>
+    <li>fprintf(), fscanf()</li>
+    <li>getw(), putw()</li>
+    <li>fgets(), fputs()</li>
+    <li>fread(), fwrite()</li>
+    <li>remove(), rename()</li>
   </ul>
 
-  <h2>Data Types</h2>
-  <p>Defines the type of data a field can hold, e.g., integer, string, date.</p>
-
-  <h2>Data Dictionary</h2>
-  <p>A repository that stores definitions of data elements and their relationships.</p>
-
-  <h2>Database Management System</h2>
-  <p><strong>Introduction:</strong> Software to manage databases.</p>
-  <p><strong>Objectives:</strong> Data sharing, security, integrity.</p>
-  <p><strong>Advantages:</strong> Reduced redundancy, data consistency.</p>
-  <p><strong>Disadvantages:</strong> Complexity, cost.</p>
-
-  <h2>Types of Database Model</h2>
+  <h2>Random Access Functions</h2>
   <ul>
-    <li>Hierarchical</li>
-    <li>Network</li>
-    <li>Relational</li>
-    <li>Entity-Relational</li>
+    <li>fseek()</li>
+    <li>rewind()</li>
+    <li>ftell()</li>
   </ul>
 
-  <h2>Integrity Constraints and Types</h2>
+  <h2>File Opening Modes</h2>
   <ul>
-    <li>Domain</li>
-    <li>Entity</li>
-    <li>Referential</li>
-    <li>Keys</li>
+    <li>Read (r, r+)</li>
+    <li>Write (w, w+)</li>
+    <li>Append (a, a+)</li>
   </ul>
 
-  <h2>Normalization</h2>
-  <p><strong>Introduction:</strong> Process of organizing data.</p>
-  <p><strong>Normal Forms:</strong> 1NF, 2NF, 3NF.</p>
-  <p><strong>Advantages:</strong> Eliminates redundancy.</p>
-  <p><strong>Disadvantages:</strong> Complex design.</p>
-
-  <h2>Centralized and Distributed Database (with diagram)</h2>
-  <p><strong>Introduction:</strong> Centralized stores data in one location; Distributed stores data across multiple locations.</p>
-  <p><strong>Advantages & Disadvantages:</strong> Centralized is simpler but less fault tolerant; distributed improves availability but more complex.</p>
-
-  <h2>Database Security</h2>
-  <p><strong>Introduction:</strong> Protecting data.</p>
-  <p><strong>Challenges:</strong> Unauthorized access, data breaches.</p>
-  <p><strong>Security Measures:</strong> Authentication, authorization, encryption.</p>
-
-  <h2>DBA and Roles of DBA</h2>
-  <p>Database Administrator manages database systems and ensures performance, security, and integrity.</p>
-
-  <h2>ER Diagrams</h2>
-  <p><strong>Introduction:</strong> Visual representation of data.</p>
-  <p><strong>Entity, Attributes, Relationships, Cardinality and Degree:</strong> Basic components; symbols denote each.</p>
-
-  <h2>SQL (DDL and DML)</h2>
-  <p><strong>Data Constraints:</strong> Not Null, Unique, Primary Key, Auto Increment.</p>
-  <p><strong>Operators:</strong> AND, OR, NOT.</p>
-  <p><strong>Where Clause</strong> and <strong>Order By</strong>.</p>
-  <p><strong>SQL JOIN:</strong> inner, left, right, full (with examples).</p>
-
-  <hr>
-
-  <h1>Unit 4: C Programming</h1>
-
-  <h2>Functions</h2>
-  <p><strong>Introduction and Syntax:</strong> Blocks of reusable code.</p>
-  <p><strong>Purpose and Advantages:</strong> Modular code, reusability.</p>
-  <p><strong>Components:</strong> Prototype, Definition, Call, Return.</p>
-  <p><strong>Types:</strong> Library and User Defined.</p>
-  <p><strong>Passing Arguments:</strong> Call by Value and Call by Reference.</p>
-  <p><strong>Variable Scope:</strong> Local and Global.</p>
-  <p><strong>Storage Classes:</strong> Automatic, External, Static, Register.</p>
-  <p><strong>Function with Array:</strong> Example usage.</p>
-  <p><strong>Recursive Function:</strong> Calls itself; syntax and example.</p>
-  <p><strong>Advantages and Disadvantages:</strong> Simplifies problems but can be memory intensive.</p>
-
-  <h2>Structure and Union</h2>
-  <p><strong>Structure:</strong> Group of variables under one name.</p>
-  <p><strong>Union:</strong> Similar to structure but shares memory.</p>
-  <p><strong>Comparison:</strong> Structures have separate memory; unions share.</p>
-
-  <h2>Pointers</h2>
-  <p><strong>Introduction:</strong> Variables holding memory addresses.</p>
-  <p><strong>Usage and Working:</strong> Access and modify data via addresses.</p>
-  <p><strong>Declaration and Initialization.</strong></p>
-  <p><strong>Pointer and Function:</strong> Example usage.</p>
-  <p><strong>Call by Reference:</strong> Passing pointer to modify variable.</p>
-  <p><strong>Comparison:</strong> Call by Value vs Call by Reference.</p>
-  <p><strong>Pointer with Arrays:</strong> Example usage.</p>
-  <p><strong>Advantages and Disadvantages.</strong></p>
-
-  <h2>File Handling</h2>
-  <p><strong>Concept:</strong> Managing data files in C.</p>
-  <p><strong>Need:</strong> Persistent storage.</p>
-  <p><strong>Types:</strong> Sequential and Random files.</p>
-
-  <h3>File Handling Functions</h3>
-  <ul>
-    <li><code>fopen()</code>, <code>fclose()</code></li>
-    <li><code>getc()</code>, <code>putc()</code></li>
-    <li><code>fprintf()</code>, <code>fscanf()</code></li>
-    <li><code>getw()</code>, <code>putw()</code></li>
-    <li><code>fgets()</code>, <code>fputs()</code></li>
-    <li><code>fread()</code>, <code>fwrite()</code></li>
-    <li><code>remove()</code>, <code>rename()</code></li>
-  </ul>
-
-  <h3>Random Access Functions</h3>
-  <ul>
-    <li><code>fseek()</code></li>
-    <li><code>rewind()</code></li>
-    <li><code>ftell()</code></li>
-  </ul>
-
-  <h3>File Opening Modes</h3>
-  <ul>
-    <li>Read (<code>r</code>, <code>r+</code>)</li>
-    <li>Write (<code>w</code>, <code>w+</code>)</li>
-    <li>Append (<code>a</code>, <code>a+</code>)</li>
-  </ul>
-
-  <h3>Steps to Work with File in C</h3>
+  <h2>Steps to Work with File in C</h2>
   <ol>
     <li>Define File Pointer</li>
     <li>Open File with Required Mode</li>
@@ -2897,6 +2884,6 @@ Despite its benefits, DBMSs can be costly to install and maintain, require signi
     <li>Appending Data Files</li>
     <li>End of File (EOF)</li>
   </ol>
+
 </body>
 </html>
-
